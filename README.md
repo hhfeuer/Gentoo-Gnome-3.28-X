@@ -74,9 +74,12 @@ needs package.keywords/accept_keywords:
 	=sys-auth/polkit-0.114 ~amd64
 	=media-plugins/grilo-plugins-0.3.5 ~amd64
 
-due to bug in folks needs package.use:
+needs package.use:
 
 	dev-libs/folks -tracker
+	>=x11-libs/gtksourceview-3.24.7 vala
+	>=net-libs/gnome-online-accounts-3.26.2 vala
+
 
 depending on kernel config might need package.use:
 
