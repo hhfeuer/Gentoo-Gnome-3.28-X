@@ -88,10 +88,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	>=sys-auth/polkit-0.114
 	virtual/pkgconfig
-	x11-proto/inputproto
-	x11-proto/xf86miscproto
-	x11-proto/kbproto
-	>=x11-proto/xproto-7.0.15
+	x11-base/xorg-proto
 "
 PATCHES=(
 	# Make Wacom devices optional
