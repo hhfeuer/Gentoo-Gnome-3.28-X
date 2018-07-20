@@ -1,0 +1,10 @@
+--- a/plugins/common/gsd-device-manager.c 2018-07-20 00:43:14.514614409 +0200
++++ b/plugins/common/gsd-device-manager.c 2018-07-20 00:43:40.766917365 +0200
+@@ -23,6 +23,7 @@
+ 
+ #include <string.h>
+ 
++#include "gsd-device-manager-udev.h"
+ #include "gsd-device-manager-x11.h"
+ #include "gsd-common-enums.h"
+ #include "gnome-settings-bus.h"
