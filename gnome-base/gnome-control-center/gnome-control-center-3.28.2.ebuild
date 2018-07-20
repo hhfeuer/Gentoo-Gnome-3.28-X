@@ -121,7 +121,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}"/3.28.1-optional-wacom-bluetooth-networkmanager.patch
+	"${FILESDIR}"/3.28.2-optional-wacom-bluetooth-networkmanager.patch
 )
 
 src_configure() {

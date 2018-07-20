@@ -10,7 +10,7 @@ General information
 -------------------
 
  - Does not need the Gnome 3.26 overlay
- - All ebuild are keyworded amd64
+ - All ebuilds are keyworded amd64
  - Only contains dependencies for and tested with USE="-wayland"
  - Updated games not (yet) included
  - Portions taken from the Heather Gnome overlay
@@ -48,7 +48,7 @@ As of Version 3.28, nautilus has dropped support for Desktop Icons. To get them 
 	>=gnome-base/nautilus-3.28.1
 	>=gnome-extra/gnome-user-share-3.28.0
 
-to stay on nautilus-3.26.3.1 or use the experimental gnome-shell plugin at:
+to stay on nautilus-3.26.x or use the experimental gnome-shell plugin at:
 
 	https://gitlab.gnome.org/csoriano/org.gnome.desktop-icons
 
