@@ -56,7 +56,7 @@ diff -ur gnome-settings-daemon-3.28.1.orig/plugins/common/meson.build gnome-sett
 -if enable_gudev
 -  sources += files('gsd-device-manager-udev.c')
 +if enable_wayland
-+  sources += files('gsd-device-manager-udev.c','gsd-device-manager-udev.c')
++  sources += files('gsd-device-manager-udev.h','gsd-device-manager-udev.c')
  
    deps += gudev_dep
  endif
