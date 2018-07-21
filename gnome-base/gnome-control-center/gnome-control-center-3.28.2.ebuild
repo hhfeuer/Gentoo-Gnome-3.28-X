@@ -122,13 +122,13 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/3.28.2-optional-wacom-bluetooth-networkmanager.patch
+	"${FILESDIR}"/3.28.1-gcc-optional-kerberos.patch
 )
 
 src_configure() {
 #		$(use_enable colord color) \
 #		$(use_enable cups) \
 #		$(use_enable gnome-online-accounts goa) \
-#		$(use_enable kerberos) \
 	local emesonargs=(
 		-Doption=disable-update-mimedb
 		-Doption=disable-static
@@ -138,6 +138,7 @@ src_configure() {
 		$(meson_use wayland)
                 $(meson_use networkmanager)
                 $(meson_use bluetooth)
+		$(meson_use kerberos)
                 $(meson_use input_devices_wacom wacom)
 
 	)
