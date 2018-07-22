@@ -34,7 +34,7 @@ diff -ur gnome-control-center-3.28.1.orig/panels/user-accounts/meson.build gnome
 +  krb_dep = dependency('krb5', required: false)
 +  assert(krb_dep.found(), 'kerberos libraries not found in your path')
 +  deps += krb_dep
-+  config_h.set('HAVE_kerberos', enable_kerberos,
++  config_h.set('HAVE_KERBEROS', enable_kerberos,
 +             description: 'Define to 1 to enable kerberos support')
 +endif
 +
