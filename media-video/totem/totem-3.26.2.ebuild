@@ -6,15 +6,16 @@ GNOME2_LA_PUNT="yes" # plugins are dlopened
 PYTHON_COMPAT=( python{3_4,3_5,3_6} )
 PYTHON_REQ_USE="threads"
 
-inherit meson autotools gnome2 python-single-r1
+inherit autotools gnome2 meson python-single-r1 vala
 
 DESCRIPTION="Media player for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Videos"
 
+
+
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="doc vala debug +introspection lirc nautilus +python test"
-
 # see bug #359379
 REQUIRED_USE="
 	python? ( introspection ${PYTHON_REQUIRED_USE} )
@@ -86,6 +87,11 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
+src_prepare() {
+	use vala && vala_src_prepare
+	default
+}
+
 src_configure() {
 	local emesonargs=(
 		-Denable-easy-codec-installation="yes" # Won’t compile if set to "no"
@@ -98,8 +104,7 @@ src_configure() {
 		-Denable-introspection=$(usex introspection yes no)
 	)
 
-        use vala && VALAC=`whereis valac- | cut -d\  -f2` meson_src_configure \
-        || meson_src_configure
+	meson_src_configure
 }
 
 src_compile() {
