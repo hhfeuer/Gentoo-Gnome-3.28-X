@@ -98,11 +98,8 @@ src_configure() {
 		-Denable-introspection=$(usex introspection yes no)
 	)
 
-        if use vala; then
-                VALAC=`whereis valac- | cut -d\  -f2` meson_src_configure
-	else
-	        meson_src_configure
-        fi
+        use vala && VALAC=`whereis valac- | cut -d\  -f2` meson_src_configure \
+        || meson_src_configure
 }
 
 src_compile() {
