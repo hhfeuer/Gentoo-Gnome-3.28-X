@@ -33,21 +33,9 @@ DEPEND="${COMMON_DEPEND}
 src_prepare() {
 	gnome2_src_prepare
 	vala_src_prepare
-	meson_src_prepare
+	default
 }
 
 src_configure() {
         meson_src_configure
-}
-
-src_compile() {
-	meson_src_compile
-}
-
-src_test() {
-	meson_src_test
-}
-
-src_install() {
-	meson_src_install
 }
