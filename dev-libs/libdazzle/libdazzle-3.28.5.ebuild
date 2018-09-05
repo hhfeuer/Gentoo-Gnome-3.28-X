@@ -35,7 +35,6 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
-		-Dwith-manpage=true
 		-Dwith_introspection=$(usex introspection true false)
 	)
 	meson_src_configure
