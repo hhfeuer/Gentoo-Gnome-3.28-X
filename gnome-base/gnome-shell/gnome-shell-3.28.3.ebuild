@@ -129,10 +129,9 @@ PATCHES=(
 )
 src_configure() {
 	local emesonargs=(
-		-Denable-systemd=yes
-		-Dwith_bluetooth=$(usex bluetooth true false)
-		-Denable-networkmanager=$(usex networkmanager yes no)
-		-DBROWSER_PLUGIN_DIR="${EPREFIX}"/usr/$(get_libdir)/nsbrowser/plugins
+		-Dsystemd=true
+		-Dnetworkmanager=$(usex networkmanager true false)
+		-Dbrowser_plugin=true
 	)
 	meson_src_configure
 }
