@@ -60,18 +60,17 @@ gnome-tweak-tool has been renamed to gnome-tweaks, so the ebuild contains a bloc
 
 needs package.unmask:
 
-	=sys-auth/polkit-0.114
 	=app-text/libgepub-0.6.0
-	=dev-lang/spidermonkey-52.4.0_pre20171003-r1
 
 needs package.keywords/accept_keywords:
 
 	=media-libs/gegl-0.3.34 ~amd64
 	=media-libs/babl-0.1.46 ~amd64
 	=sys-power/upower-0.99.7 ~amd64
-	=sys-fs/udisks-2.7.6 ~amd64
-	=dev-lang/spidermonkey-52.4.0_pre20171003-r1 ~amd64
-	=sys-auth/polkit-0.114 ~amd64
+	=dev-lang/spidermonkey-52.9.1_pre1 ~amd64
+	=sys-fs/udisks-2.8.0 ~amd64
+	=sys-auth/polkit-0.115-r1 ~amd64
+	=sys-libs/libblockdev-2.19 ~amd64
 	=media-plugins/grilo-plugins-0.3.5 ~amd64
 
 needs package.use:
